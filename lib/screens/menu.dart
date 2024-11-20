@@ -6,18 +6,22 @@ class MyHomePage extends StatelessWidget {
   final String npm = '2306212695'; // NPM
   final String name = 'Alfian Bassam Firjatullah'; // Nama
   final String className = 'PBP A'; // Kelas
+
   MyHomePage({super.key});
 
   final List<ItemHomepage> items = [
-      ItemHomepage("Lihat Mood", Icons.mood),
-      ItemHomepage("Tambah Mood", Icons.add),
-      ItemHomepage("Logout", Icons.logout),
+    ItemHomepage("Lihat Mood", Icons.mood),
+    ItemHomepage("Tambah Mood", Icons.add),
+    ItemHomepage("Logout", Icons.logout),
   ];
 
   @override
   Widget build(BuildContext context) {
+    // Scaffold menyediakan struktur dasar halaman dengan AppBar dan body.
     return Scaffold(
+      // AppBar adalah bagian atas halaman yang menampilkan judul.
       appBar: AppBar(
+        // Judul aplikasi "Mental Health Tracker" dengan teks putih dan tebal.
         title: const Text(
           'Mental Health Tracker',
           style: TextStyle(
@@ -25,15 +29,19 @@ class MyHomePage extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
+        // Warna latar belakang AppBar diambil dari skema warna tema aplikasi.
         backgroundColor: Theme.of(context).colorScheme.primary,
         iconTheme: const IconThemeData(color: Colors.white),
       ),
+      // Body halaman dengan padding di sekelilingnya.
       drawer: const LeftDrawer(),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
+        // Menyusun widget secara vertikal dalam sebuah kolom.
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            // Row untuk menampilkan 3 InfoCard secara horizontal.
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -121,4 +129,3 @@ class InfoCard extends StatelessWidget {
     );
   }
 }
-

@@ -57,22 +57,22 @@ class LeftDrawer extends StatelessWidget {
             // Bagian redirection ke MoodEntryFormPage
             onTap: () {
               Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const MoodEntryFormPage(),
-                  ));
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => MoodEntryFormPage(),
+                          ));
             },
           ),
           ListTile(
-            leading: const Icon(Icons.add_reaction_rounded),
-            title: const Text('Daftar Mood'),
-            onTap: () {
-              // Route menu ke halaman mood
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const MoodEntryPage()),
-              );
-            },
+              leading: const Icon(Icons.add_reaction_rounded),
+              title: const Text('Daftar Mood'),
+              onTap: () {
+                  // Route menu ke halaman mood
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const MoodEntryPage()),
+                  );
+              },
           ),
         ],
       ),
